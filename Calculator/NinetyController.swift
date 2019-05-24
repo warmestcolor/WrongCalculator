@@ -295,8 +295,8 @@ extension NinetyController {
             let value = queue[queue.count - i - 1] * Int(truncating: NSDecimalNumber(decimal: pow_))
             sum += value
         }
-        if sum == 3 {
-            sum = 957
+        if sum < 9 {
+            sum = Int.random(in: 0..<9)
         }
         return String(sum)
     }
